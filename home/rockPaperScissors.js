@@ -6,24 +6,30 @@ function playRound(playerSelection, computerSelection) {
                 alert("tie!")
             } else if (computerSelection === "paper") {
                 alert("paper beats rock, computer wins!")
+                computerScore = computerScore + 1;
             } else if (computerSelection === "scissors") {
                 alert("rock beats scissors, player wins!")
+                playerScore = playerScore + 1;
             }
             break;
         case "paper":
             if (computerSelection === "rock") {
                 alert("paper beats rock, player wins!")
+                playerScore = playerScore + 1;
             } else if (computerSelection === "paper") {
                 alert("tie!")
             } else if (computerSelection === "scissors") {
                 alert("scissors beats paper, computer wins!")
+                computerScore = computerScore + 1;
             }
             break;
         case "scissors":
             if (computerSelection === "rock") {
                 alert("rock beats scissors, computer wins!")
+                computerScore = computerScore + 1;
             } else if (computerSelection === "paper") {
                 alert("scissors beats paper, player wins!")
+                playerScore = playerScore + 1;
             } else if (computerSelection === "scissors") {
                 alert("tie!")
             }
@@ -36,6 +42,9 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+
+let playerScore = 0;
+let computerScore = 0;
 
 function computerPlay() {
     
@@ -65,11 +74,16 @@ function playerSelection(playerChoice) {
             alert("You put something other than rock, paper, scissors.  Try again!")
             return playerChoice;
         } else {
-            let computerSelect = computerPlay();
-            playRound(playerChoice, computerSelect)
+            return playerChoice;
         }
 }
 
-let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
+function game() {
+    for (let i = 0; i < 5; i++){
+        let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
+        let computerSelect = computerPlay()
+        playRound(playerChoice, computerSelect)
+    }
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+}
 // alert(playerSelection(playerSelect) + " " + computerSelect);
-playRound(playerSelect, computerSelect)
