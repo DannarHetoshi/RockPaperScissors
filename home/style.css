@@ -1,0 +1,17 @@
+.RPSgame {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.computer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}

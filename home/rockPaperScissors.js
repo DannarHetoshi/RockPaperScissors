@@ -65,9 +65,11 @@ function playerSelection(playerChoice) {
             alert("You put something other than rock, paper, scissors.  Try again!")
             return playerChoice;
         } else {
+            computerSelect = computerPlay();
             playRound(playerChoice, computerSelect)
         }
 }
+
 let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
 let computerSelect = computerPlay();
 // alert(playerSelection(playerSelect) + " " + computerSelect);
