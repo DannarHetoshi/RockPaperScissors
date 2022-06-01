@@ -82,7 +82,7 @@ function game() {
     for (let i = 0; i < 5; i++){
         let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
         let computerSelect = computerPlay()
-        playRound(playerChoice, computerSelect)
+        playRound(playerSelect, computerSelect)
     }
     alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
 }
