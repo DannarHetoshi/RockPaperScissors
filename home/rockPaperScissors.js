@@ -3,36 +3,36 @@ function playRound(playerSelection, computerSelection) {
     switch (playerSelection) {
         case "rock": 
             if (computerSelection === "rock") {
-                console.log("tie!")
+                alert("tie!")
             } else if (computerSelection === "paper") {
-                console.log("paper beats rock, computer wins!")
+                alert("paper beats rock, computer wins!")
             } else if (computerSelection === "scissors") {
-                console.log("rock beats scissors, player wins!")
+                alert("rock beats scissors, player wins!")
             }
             break;
         case "paper":
             if (computerSelection === "rock") {
-                console.log("paper beats rock, player wins!")
+                alert("paper beats rock, player wins!")
             } else if (computerSelection === "paper") {
-                console.log("tie!")
+                alert("tie!")
             } else if (computerSelection === "scissors") {
-                console.log("scissors beats paper, computer wins!")
+                alert("scissors beats paper, computer wins!")
             }
             break;
         case "scissors":
             if (computerSelection === "rock") {
-                console.log("rock beats scissors, computer wins!")
+                alert("rock beats scissors, computer wins!")
             } else if (computerSelection === "paper") {
-                console.log("scissors beats paper, player wins!")
+                alert("scissors beats paper, player wins!")
             } else if (computerSelection === "scissors") {
-                console.log("tie!")
+                alert("tie!")
             }
             break;
         try {
             throw 'Invalid player choice.'
         }
         catch (err) {
-            console.log("That is not a valid response, try again!")
+            alert("That is not a valid response, try again!")
         }
     }
 }
@@ -62,7 +62,7 @@ function computerPlay() {
 function playerSelection(playerChoice) {
     playerChoice = playerChoice.toLowerCase();
         if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
-            console.log("You put something other than rock, paper, scissors.  Try again!")
+            alert("You put something other than rock, paper, scissors.  Try again!")
             return playerChoice;
         } else {
             return playerChoice;
@@ -70,5 +70,5 @@ function playerSelection(playerChoice) {
 }
 const playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
 const computerSelect = computerPlay();
-// console.log(playerSelection(playerSelect) + " " + computerSelect);
+// alert(playerSelection(playerSelect) + " " + computerSelect);
 playRound(playerSelect, computerSelect)
