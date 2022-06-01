@@ -73,3 +73,4 @@ function playerSelection(playerChoice) {
 let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
 let computerSelect = computerPlay();
 // alert(playerSelection(playerSelect) + " " + computerSelect);
+playRound(playerChoice, computerSelect)
