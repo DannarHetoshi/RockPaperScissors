@@ -68,7 +68,7 @@ function playerSelection(playerChoice) {
             return playerChoice;
         }
 }
-const playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
-const computerSelect = computerPlay();
+let playerSelect = playerSelection(prompt("Choose: Rock, Paper, or Scissors?"))
+let computerSelect = computerPlay();
 // alert(playerSelection(playerSelect) + " " + computerSelect);
 playRound(playerSelect, computerSelect)
