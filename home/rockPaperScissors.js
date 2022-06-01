@@ -86,4 +86,6 @@ function game() {
     }
     alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
 }
+
+game()
 // alert(playerSelection(playerSelect) + " " + computerSelect);
