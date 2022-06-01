@@ -44,7 +44,7 @@ function computerPlay() {
     let rock = "rock";
 
     let choice = Math.floor(Math.random() * 3);
-    let answer = "";
+    let answer = null;
     switch (choice) {
         case 0:
             answer = rock;
