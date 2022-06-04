@@ -7,45 +7,43 @@ let winner = "And the winner is: ";
 function playRound(playerSelection, computerSelection) {
     // Code goes here
     const compSelect = computerSelection.toLowerCase();
-    switch (playerSelection) {
-        case "rock": 
-            if (compSelect == "rock") {
-                document.getElementById("winner").innerHTML = winner + "It's a tie!";
-            } else if (compSelect == "paper") {
-                document.getElementById("winner").innerHTML = winner + "Computer";
-                computerScore = computerScore + 1;
-            } else if (compSelect == "scissors") {
-                document.getElementById("winner").innerHTML = winner + "Player";
-                playerScore = playerScore + 1;
+    if (playerSelection == compSelect) {
+        document.getElementById("winner").innerHTML = winner + "It's a tie!";
+    } else {
+        switch (playerSelection) {        
+            case "rock": 
+                if (compSelect == "paper") {
+                    document.getElementById("winner").innerHTML = winner + "Computer";
+                    computerScore = computerScore + 1;
+                } else {
+                    document.getElementById("winner").innerHTML = winner + "Player";
+                    playerScore = playerScore + 1;
+                }
+                break;
+            case "paper":
+                if (compSelect == "rock") {
+                    document.getElementById("winner").innerHTML = winner + "Player";
+                    playerScore = playerScore + 1;
+                } else {
+                    document.getElementById("winner").innerHTML = winner + "Computer";
+                    computerScore = computerScore + 1;
+                }
+                break;
+            case "scissors":
+                if (compSelect == "rock") {
+                    document.getElementById("winner").innerHTML = winner + "Computer";
+                    computerScore = computerScore + 1;
+                } else {
+                    document.getElementById("winner").innerHTML = winner + "Player";
+                    playerScore = playerScore + 1;
+                }
+                break;
+            /*try {
+                throw 'Invalid player choice.'
             }
-            break;
-        case "paper":
-            if (compSelect == "rock") {
-                document.getElementById("winner").innerHTML = winner + "Player";
-                playerScore = playerScore + 1;
-            } else if (compSelect == "paper") {
-                document.getElementById("winner").innerHTML = winner + "It's a tie!";
-            } else if (compSelect == "scissors") {
-                document.getElementById("winner").innerHTML = winner + "Computer";
-                computerScore = computerScore + 1;
-            }
-            break;
-        case "scissors":
-            if (compSelect == "rock") {
-                document.getElementById("winner").innerHTML = winner + "Computer";
-                computerScore = computerScore + 1;
-            } else if (compSelect == "paper") {
-                document.getElementById("winner").innerHTML = winner + "Player";
-                playerScore = playerScore + 1;
-            } else if (compSelect == "scissors") {
-                document.getElementById("winner").innerHTML = winner + "It's a tie!";
-            }
-            break;
-        try {
-            throw 'Invalid player choice.'
-        }
-        catch (err) {
-            alert("That is not a valid response, try again!")
+            catch (err) {
+                alert("That is not a valid response, try again!")
+            }*/
         }
     }
     game(playerScore, computerScore);
@@ -84,19 +82,19 @@ function computerPlay() {
     return answer;
 }
 
-function playerSelection(playerChoice) {
+/*function playerSelection(playerChoice) {
         if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
             alert("You put something other than rock, paper, scissors.  Try again!")
             return playerChoice;
         } else {
             return playerChoice;
         }
-}
+}*/
 
 function btnClick(e){
     const choice = this.innerText;
     document.getElementById("playChoice").innerHTML = "Player Chooses: " + choice;
-    playerSelect = playerSelection(choice.toLowerCase());
+    playerSelect = choice.toLowerCase();
     computerSelection = computerPlay();
     document.getElementById("compChoice").innerHTML = "Computer Chooses: " + computerSelection;
     playRound(playerSelect, computerSelection)
