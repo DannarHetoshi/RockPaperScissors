@@ -70,6 +70,8 @@ function gameReset(){
     document.getElementById("playerScore").innerHTML = "Player: " + playerScore;
     document.getElementById("computerScore").innerHTML = "Computer: " + computerScore;
     document.getElementById("winner").innerHTML = "And the winner is: ";
+    document.getElementById("playChoice").innerHTML = "Player Chooses: ";
+    document.getElementById("compChoice").innerHTML = "Computer Chooses: ";
     return;
 }
 
