@@ -54,20 +54,20 @@ function game(pScore, cScore) {
     document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
     if (pScore == 5) {
         alert("Player wins with a score of " + pScore + " to " + cScore);
-        pScore = 0;
-        cScore = 0;
-        document.getElementById("playerScore").innerHTML = "Player: " + pScore;
-        document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
-        return (pScore, cScore);
+        playerScore = 0;
+        computerScore = 0;
+        document.getElementById("playerScore").innerHTML = "Player: " + playerScore;
+        document.getElementById("computerScore").innerHTML = "Computer: " + computerScore;
+        return;
     } else if (cScore == 5) {
         alert("Computer wins with a score of " + cScore + " to " + pScore);
-        pScore = 0;
-        cScore = 0;
-        document.getElementById("playerScore").innerHTML = "Player: " + pScore;
-        document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
-        return (pScore, cScore);
+        playerScore = 0;
+        computerScore = 0;
+        document.getElementById("playerScore").innerHTML = "Player: " + playerScore;
+        document.getElementById("computerScore").innerHTML = "Computer: " + computerScore;
+        return;
     }
-    return (pScore, cScore);
+    return;
 }
 
 function computerPlay() {
