@@ -94,6 +94,8 @@ const content = document.createElement('div');
 content.classList.add('content');
 content.textContent = 'This is the glorious text-content!';
 
+container.appendChild(content);
+
 /*content.createElement('p')
 container.appendChild(content);
 content.textContent = "Hey I'm red!";
