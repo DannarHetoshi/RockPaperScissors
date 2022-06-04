@@ -103,6 +103,7 @@ function btnClick(e){
 }
 
 function removeTransition(e){
+    if(e.properName !== 'transform') return;
     this.classList.remove('clicked');
 }
 
