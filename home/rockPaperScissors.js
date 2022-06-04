@@ -93,19 +93,21 @@ function computerPlay() {
 
 function btnClick(e){
     const choice = this.innerText;
-    const btn = document.querySelector('button');
-    btn.classList.add('clicked');
+    this.classList.add('clicked');
     document.getElementById("playChoice").innerHTML = "Player Chooses: " + choice;
     playerSelect = choice.toLowerCase();
     computerSelection = computerPlay();
     document.getElementById("compChoice").innerHTML = "Computer Chooses: " + computerSelection;
     playRound(playerSelect, computerSelection)
+    removeTransition(e)
 }
 
 function removeTransition(e){
     if(e.properName !== 'transform') return;
+    console.log(e);
     this.classList.remove('clicked');
 }
 
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => button.addEventListener('click', btnClick, removeTransition));
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', btnClick));
+buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
