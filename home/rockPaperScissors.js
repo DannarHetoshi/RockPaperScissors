@@ -88,4 +88,16 @@ function game() {
 }
 
 game()
+
+const container = document.querySelector('#container');
+const content = document.createElement('div');
+content.classList.add('content');
+content.textContent = 'This is the glorious text-content!';
+
+/*content.createElement('p')
+container.appendChild(content);
+content.textContent = "Hey I'm red!";
+content.createElement('h3')
+container.appendChild(content);
+content.textContent = "I'm a blue h3!";*/
 // alert(playerSelection(playerSelect) + " " + computerSelect);
