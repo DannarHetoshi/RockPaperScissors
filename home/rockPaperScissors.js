@@ -95,15 +95,6 @@ function computerPlay() {
     return answer;
 }
 
-/*function playerSelection(playerChoice) {
-        if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
-            alert("You put something other than rock, paper, scissors.  Try again!")
-            return playerChoice;
-        } else {
-            return playerChoice;
-        }
-}*/
-
 function btnClick(e){
     const choice = this.innerText;
     this.classList.add('clicked');
@@ -116,7 +107,6 @@ function btnClick(e){
 
 function removeTransition(e){
     if(e.propertyName !== 'transform') return;
-    console.log(e);
     this.classList.remove('clicked');
 }
 
