@@ -108,8 +108,7 @@ function btnClick(e){
     playerSelect = choice.toLowerCase();
     computerSelection = computerPlay();
     document.getElementById("compChoice").innerHTML = "Computer Chooses: " + computerSelection;
-    playRound(playerSelect, computerSelection)
-    removeTransition(e)
+    playRound(playerSelect, computerSelection);
 }
 
 function removeTransition(e){
@@ -120,4 +119,5 @@ function removeTransition(e){
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', btnClick));
-buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
+const btns = document.querySelectorAll('button');
+btns.forEach(button => button.addEventListener('transitionend', removeTransition));
