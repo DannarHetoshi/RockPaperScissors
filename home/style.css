@@ -4,18 +4,6 @@
     justify-content: center;
 }
 
-.player {
-    display: flex;
-    flex-direction: column;
-    padding: 4px;
-}
-
-.computer {
-    display: flex;
-    flex-direction: column;
-    padding: 4px;
-}
-
 button {
     min-width: fit-content;
     background-color: #7fd836;
