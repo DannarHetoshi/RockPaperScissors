@@ -93,6 +93,8 @@ function computerPlay() {
 
 function btnClick(e){
     const choice = this.innerText;
+    const btn = document.querySelector('button');
+    btn.classList.add('clicked');
     document.getElementById("playChoice").innerHTML = "Player Chooses: " + choice;
     playerSelect = choice.toLowerCase();
     computerSelection = computerPlay();
@@ -100,5 +102,9 @@ function btnClick(e){
     playRound(playerSelect, computerSelection)
 }
 
+function removeTransition(e){
+    this.classList.remove('clicked');
+}
+
 const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => button.addEventListener('click', btnClick));
+buttons.forEach(button => button.addEventListener('click', btnClick, removeTransition));

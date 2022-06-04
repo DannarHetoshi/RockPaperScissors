@@ -19,6 +19,13 @@ button {
     text-align: center;
     border-radius: 8px;
     font-family: furoreregular,sans-serif;
+    transition: all .1s ease;
+    text-shadow: 0 0 .5rem black;
+}
+
+.clicked {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem #0b4100;
 }
 
 #winner {

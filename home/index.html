@@ -53,6 +53,24 @@
     </div>
     <script>
 
+        function btnClick(e){
+            const choice = this.innerText;
+            const btn = document.querySelector('button');
+            btn.classList.add('clicked');
+            document.getElementById("playChoice").innerHTML = "Player Chooses: " + choice;
+            playerSelect = choice.toLowerCase();
+            computerSelection = computerPlay();
+            document.getElementById("compChoice").innerHTML = "Computer Chooses: " + computerSelection;
+            playRound(playerSelect, computerSelection)
+        }
+
+        function removeTransition(e){
+            this.classList.remove('clicked');
+        }
+
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => button.addEventListener('click', btnClick, removeTransition));
+
     </script>
 </body>
 </html>
