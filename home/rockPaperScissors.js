@@ -119,5 +119,4 @@ function removeTransition(e){
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', btnClick));
-const btns = document.querySelectorAll('button');
-btns.forEach(button => button.addEventListener('transitionend', removeTransition));
+buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
