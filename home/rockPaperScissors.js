@@ -54,9 +54,17 @@ function game(pScore, cScore) {
     document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
     if (pScore == 5) {
         alert("Player wins with a score of " + pScore + " to " + cScore);
+        pScore = 0;
+        cScore = 0;
+        document.getElementById("playerScore").innerHTML = "Player: " + pScore;
+        document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
     } else if (cScore == 5) {
         alert("Computer wins with a score of " + cScore + " to " + pScore);
-    } 
+        pScore = 0;
+        cScore = 0;
+        document.getElementById("playerScore").innerHTML = "Player: " + pScore;
+        document.getElementById("computerScore").innerHTML = "Computer: " + cScore;
+    }
     return;
 }
 
