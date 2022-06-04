@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./rockPaperScissors.js" defer></script>
     <link rel="stylesheet" href="https://dannarhetoshi.github.io/DH-HolyGrail/home/DH-HolyGrail.css">
+    <link rel="stylesheet" href="./style.css"
     <title>Dannar Hetoshi Rock Paper Scissors</title>
 </head>
 <body class="DH-HG-body">
@@ -23,13 +24,9 @@
 
         <main class="DH-HG-content">
             <div class="RPSgame">
-                <div class="player">
-                    <label id="playChoice">Player Chooses: </label>
-                </div>
-                <div class="computer">
-                    <label id="compChoice">Computer Chooses: </label>
-                </div>
-                <label id="winner">And the winner is: </label>
+                <div class="game"><label id="playChoice">Player Chooses: </label></div>
+                <div class="game"><label id="compChoice">Computer Chooses: </label></div>
+                <div class="game"><label id="winner">And the winner is: </label></div>
             </div>
         </main>
 
@@ -45,9 +42,9 @@
         
         <ads class="DH-HG-ads">
             <div id="scoreboard">
-                <h5>Current Score: </h5>
-                <br><label id="playerScore">Player: </label>
-                <br><label id="computerScore">Computer: </label>
+                <div class="score"><h3>Current Score: </h3></div>
+                <div class="score"><label id="playerScore">Player: </label></div>
+                <div class="score"><label id="computerScore">Computer: </label></div>
             </div>
         </ads>
         <footer class="DH-HG-footer">
