@@ -37,3 +37,17 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+@media all and (max-width: 444px) {
+
+    .DH-HG-body {
+        font-size: 18px;
+    }
+
+    .player, ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2px;
+    }    
+}
